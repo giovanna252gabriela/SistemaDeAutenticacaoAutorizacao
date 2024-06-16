@@ -3,24 +3,29 @@
 Esta API permite que você controle acessos a diferentes partes do sistema com base nas ROLES dos usuários.
 
 ## Sumário
-• Endpoints
-• Erros Comuns
-• Estrutura do Projeto
-• Componentes Principais
-• Uso
-• Exemplos de Requisições
+- Endpoints
+- Autenticação
+- Erros Comuns
+- Diagrama
+- Exemplos de Uso
 
 ## Endpoints
-• POST /login: Autentica um usuário e retorna um token JWT.
-• GET /username/{token}: Extrai o nome de usuário de um token JWT fornecido.
-• GET /user: Retorna as informações do usuário autenticado.
-• GET /admin: Restrito a usuários com o papel "ADMIN".
-• GET /moderado: Restrito a usuários com o papel "MODERADO".
-• GET /comum: Restrito a usuários com o papel "COMUM".
 
-## Erros comuns
-• 401 Unauthorized: Indica que o usuário ou a senha estão incorretos.
-• 403 Forbidden: Indica que o usuário autenticado não possui a role necessária para acessar o endpoint.
+- **POST /login**: Autentica um usuário e retorna um token JWT.
+- **GET /username/{token}**: Extrai o nome de usuário de um token JWT fornecido.
+- **GET /user**: Retorna as informações do usuário autenticado.
+- **GET /admin**: Restrito a usuários com o papel "ADMIN".
+- **GET /moderado**: Restrito a usuários com o papel "MODERADO".
+- **GET /comum**: Restrito a usuários com o papel "COMUM".
+
+## Autenticação
+
+Esta API utiliza JSON Web Token (JWT) como método de autenticação. Após um usuário ser autenticado via `/login`, um token JWT é gerado e deve ser usado para acessar endpoints protegidos.
+
+## Erros Comuns
+
+- **401 Unauthorized**: Indica que o usuário ou a senha estão incorretos.
+- **403 Forbidden**: Indica que o usuário autenticado não possui a role necessária para acessar o endpoint.
 
 ## Estrutura do Projeto
 O projeto está organizado da seguinte forma:
