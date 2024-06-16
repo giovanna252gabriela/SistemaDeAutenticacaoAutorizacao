@@ -94,4 +94,5 @@ curl -X GET http://localhost:8080/admin -H "Authorization: Bearer {token}"
 
 ## Diagrama
 
-![Captura de tela 2024-06-15 181848](https://github.com/giovanna252gabriela/SistemaDeAutenticacaoAutorizacao/assets/125416536/17ca7adb-5e95-44e9-9623-3cb23af76986)
+![Captura de tela 2024-06-16 183639](https://github.com/giovanna252gabriela/SistemaDeAutenticacaoAutorizacao/assets/125416536/2dfa806e-7124-41b5-a888-4bd001e69833)
+
