@@ -70,17 +70,17 @@ Envie uma requisição POST para /login com um JSON contendo username e password
 ## Exemplos de requisição
 
 ### Requisição de Login
-
+```sh
 curl -X POST http://localhost:8080/login -H "Content-Type: application/json" -d '{"username": "giovanna", "password": "0311"}'
-
+```
 ### Extrair nome de usuário
-
+```sh
 curl -X GET http://localhost:8080/username/{token}
-
+```
 ### Acessar endpoint do administrador
-
+```sh
 curl -X GET http://localhost:8080/admin -H "Authorization: Bearer {token}"
-
+```
 
 
 ## Prints do Insomnia
