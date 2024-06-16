@@ -6,8 +6,10 @@ Esta API permite que você controle acessos a diferentes partes do sistema com b
 - Endpoints
 - Autenticação
 - Erros Comuns
-- Diagrama
-- Exemplos de Uso
+- Estrutura do Projeto
+- Componentes Principais
+- Uso
+- Exemplos de Requisições
 
 ## Endpoints
 
@@ -28,41 +30,58 @@ Esta API utiliza JSON Web Token (JWT) como método de autenticação. Após um u
 - **403 Forbidden**: Indica que o usuário autenticado não possui a role necessária para acessar o endpoint.
 
 ## Estrutura do Projeto
+
 O projeto está organizado da seguinte forma:
 
-• config: Configurações de segurança e beans do Spring.
-• controller: Controladores REST que lidam com as requisições HTTP.
-• model: Modelos de dados para requisições e respostas.
-• security: Classes utilitárias para operações relacionadas ao JWT.
-• service: Serviços que contêm a lógica de negócios.
+- **config**: Configurações de segurança e beans do Spring.
+- **controller**: Controladores REST que lidam com as requisições HTTP.
+- **model**: Modelos de dados para requisições e respostas.
+- **security**: Classes utilitárias para operações relacionadas ao JWT.
+- **service**: Serviços que contêm a lógica de negócios.
 
 ## Componentes Principais
+
 ### Pontos de entrada da aplicação
-• `AuenticacaoAutorizacaoApplication`: Classe principal que inicializa a aplicação Spring Boot.
+- `AuenticacaoAutorizacaoApplication`: Classe principal que inicializa a aplicação Spring Boot.
+
 ### Configuração de segurança
-• `SecurityConfig`: Configura as definições de segurança HTTP, detalhes dos usuários e codificação de senhas. Define quais endpoints requerem autenticação e quais são acessíveis publicamente.
+- `SecurityConfig`: Configura as definições de segurança HTTP, detalhes dos usuários e codificação de senhas. Define quais endpoints requerem autenticação e quais são acessíveis publicamente.
+
 ### Controller
-• `AuthController`: Manipula requisições relacionadas à autenticação e fornece os endpoints de login e acesso aos recursos protegidos.
+- `AuthController`: Manipula requisições relacionadas à autenticação e fornece os endpoints de login e acesso aos recursos protegidos.
+
 ### Model
-• `UserEntity`: Representa os dados do usuário para as requisições de login.
+- `UserEntity`: Representa os dados do usuário para as requisições de login.
+
 ### Security
-• `JwtUtil`: Contém métodos para gerar e extrair informações de tokens JWT.
+- `JwtUtil`: Contém métodos para gerar e extrair informações de tokens JWT.
+
 ### Service
-• `AuthService`: Fornece métodos para gerar tokens JWT e extrair nomes de usuário dos tokens.
+- `AuthService`: Fornece métodos para gerar tokens JWT e extrair nomes de usuário dos tokens.
 
 ## Uso
+
 ### Executar a aplicação
 Use sua IDE ou linha de comando para executar a classe `AuenticacaoAutorizacaoApplication`.
+
 ### Autenticar usuário
 Envie uma requisição POST para /login com um JSON contendo username e password.
 
 ## Exemplos de requisição
+
 ### Requisição de Login
+
 curl -X POST http://localhost:8080/login -H "Content-Type: application/json" -d '{"username": "giovanna", "password": "0311"}'
+
 ### Extrair nome de usuário
+
 curl -X GET http://localhost:8080/username/{token}
-### Acessar endpoint de administrador
+
+### Acessar endpoint do administrador
+
 curl -X GET http://localhost:8080/admin -H "Authorization: Bearer {token}"
+
+
 
 ## Prints do Insomnia
 
