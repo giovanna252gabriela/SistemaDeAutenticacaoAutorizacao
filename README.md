@@ -1,6 +1,6 @@
 # Sistema de Autenticação e Autorização
 
-Esta API permite que você controle acessos a diferentes partes do sistema com base nas ROLES dos usuários.
+Este projeto exemplifica uma implementação direta de uma API REST com autenticação JWT (JSON Web Token) utilizando Spring Boot. A API é configurada para gerenciar papéis de usuários e controlar o acesso a diversos endpoints de forma segura e eficiente.
 
 ## Sumário
 - Endpoints
