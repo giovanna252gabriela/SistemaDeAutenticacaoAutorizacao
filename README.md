@@ -92,6 +92,11 @@ curl -X GET http://localhost:8080/admin -H "Authorization: Bearer {token}"
  2024-06-16 172002](https://github.com/giovanna252gabriela/SistemaDeAutenticacaoAutorizacao/assets/125416536/78f203e6-f66d-4cfe-8527-db79f1d9f606)
 ![Captura de tela 2024-06-16 172153](https://github.com/giovanna252gabriela/SistemaDeAutenticacaoAutorizacao/assets/125416536/e9f82179-9e92-4de9-9bd0-77c9c37f9cd8)
 
+## Usuário não autorizado
+Não é permitido usuários sem autorização acessem determinados endpoints.
+
+![Captura de tela 2024-06-16 184054](https://github.com/giovanna252gabriela/SistemaDeAutenticacaoAutorizacao/assets/125416536/c9117b93-df60-4eac-9b2e-b5885cbf40f0)
+
 ## Diagrama
 
 ![Captura de tela 2024-06-16 183639](https://github.com/giovanna252gabriela/SistemaDeAutenticacaoAutorizacao/assets/125416536/2dfa806e-7124-41b5-a888-4bd001e69833)
